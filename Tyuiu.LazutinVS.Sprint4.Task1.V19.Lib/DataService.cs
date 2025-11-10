@@ -6,7 +6,7 @@ namespace Tyuiu.LazutinVS.Sprint4.Task1.V19.Lib
     {
         public int Calculate(int[] array)
         {
-            int count = 1;
+            int count = 0;
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] % 2 == 0)
