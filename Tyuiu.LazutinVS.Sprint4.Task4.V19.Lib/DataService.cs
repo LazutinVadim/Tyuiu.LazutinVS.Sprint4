@@ -15,7 +15,7 @@ namespace Tyuiu.LazutinVS.Sprint4.Task4.V19.Lib
                 {
                     if (matrix[i, j] % 2 != 0)
                     {
-                        sum += matrix[i, j];
+                         sum += matrix[i, j];
                     }
                 }
             }
