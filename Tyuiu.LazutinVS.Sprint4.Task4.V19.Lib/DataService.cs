@@ -6,20 +6,22 @@ namespace Tyuiu.LazutinVS.Sprint4.Task4.V19.Lib
     {
         public int Calculate(int[,] matrix)
         {
-            int sum = 0;
-            int rows = matrix.GetLength(0);
-            int columns = matrix.GetLength(1);
+            int rows = matrix.GetUpperBound(0) + 1;
+            int cols = matrix.Length / rows;
+
+            int c = 0;
+
             for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < cols; j++)
                 {
                     if (matrix[i, j] % 2 != 0)
                     {
-                        sum += matrix[i, j];
+                        c += matrix[i, j];
                     }
                 }
             }
-            return sum;
+            return c;
         }
     }
 }
