@@ -3,33 +3,22 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        DataService ds = new DataService();
+        string str = "945218654";
+        int[,] matrix = new int[3, 3];
+        int sum = 0;
 
-        int len;
-        Console.WriteLine("Введите размерность массива (5):");
-        len = Convert.ToInt32(Console.ReadLine());
-        int[,] numsArray = new int[len, len];
-        for (int i = 0; i < len; i++)
+        for (int i = 0; i < 3; i++)
         {
-            for (int j = 0; j < len; j++)
+            for (int j = 0; j < 3; j++)
             {
-                Console.WriteLine($"Введите элемент массива [{i + 1},{j + 1}] (от -7 до 7):");
-                numsArray[i, j] = Convert.ToInt32(Console.ReadLine());
+                matrix[i, j] = int.Parse(str[i * 3 + j].ToString());
+                if (i == 2)
+                {
+                    sum += matrix[i, j];
+                }
             }
         }
-        Console.WriteLine("Исходный массив");
-        for (int i = 0; i < len; i++)
-        {
-            for (int j = 0; j < len; j++)
-            {
-                Console.Write(numsArray[i, j] + "\t");
-            }
-            Console.WriteLine();
-        }
-        int result = ds.Calculate(numsArray);
-        Console.WriteLine("Количество отрицательных элементов массива:");
-        Console.WriteLine(result);
 
-        Console.ReadKey();
+        Console.WriteLine(sum);
     }
 }
