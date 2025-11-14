@@ -28,3 +28,4 @@ namespace Tyuiu.LazutinVS.Sprint4.Task7.V26.Lib
             return s;
         }
     }
+}
