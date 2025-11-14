@@ -16,7 +16,6 @@ internal class Program
         string value = "351268459614723";
 
 
-        Console.WriteLine("\nVассив: ");
         for (int i = 0; i < n; i++)
         {
             for (int j = 0; j < m; j++)
@@ -26,14 +25,9 @@ internal class Program
             }
             Console.WriteLine();
         }
-        Console.WriteLine();
-        Console.WriteLine("************************************************************************");
-        Console.WriteLine("* РЕЗУЛЬТАТ:                                                           *");
-        Console.WriteLine("************************************************************************");
 
         int res = ds.Calculate(n, m, value);
 
-        Console.WriteLine($"Ответ = {res} ");
-        Console.ReadKey();
+        Console.WriteLine(res);
     }
 }
